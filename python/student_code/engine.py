@@ -33,8 +33,8 @@ def decide(scenario):
     # This is an overly simple rule that only saves the passengers if there are
     # more passengers than pedestrians.
 
-    if len(scenario.passengers) > len(scenario.pedestrians):
-        return "passengers"
-    else:
+    if scenario.legalCrossing == True:
         return "pedestrians"
+    else:
+        return "passengers"
     
